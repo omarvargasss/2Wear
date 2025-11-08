@@ -58,5 +58,57 @@
       </nav>
     </header>
   </div>
+  <script>
+    const WHATSAPP_NUMBER = '527713392257';
+    const PRODUCTS = [
+      {
+        id: "hoodie-negra-essentials",
+        name: "Hoodie Negra Essentials",
+        price: 1750,
+        sizes: ["S","M","L"],
+        stock: {S: 5, M: 5, L: 5},
+        thumbs: [
+          "https://drive.google.com/uc?export=view&id=1e6zXQwsRvVhoGNlyCYBjEbMYjxOyRWat",
+          "https://drive.google.com/uc?export=view&id=1lZS1Zw2kycp6IHflVDzxEz25GUOIQSFB",
+          "https://drive.google.com/uc?export=view&id=1OS2d5W3gxxR6t8nvtPBnCGxgnxNX3WEo"
+        ],
+        desc: "Algodón 80%, Poliéster 20%"
+      },
+      {
+        id: "hoodie-gris-claro-essentials",
+        name: "Hoodie Gris Claro Essentials",
+        price: 1750,
+        sizes: ["S","M","L"],
+        stock: {S: 5, M: 5, L: 5},
+        thumbs: [
+          "https://drive.google.com/uc?export=view&id=1_ABcnuhqzkHbL46BB3jfyyi8BYmg1MLC",
+          "https://drive.google.com/uc?export=view&id=1tYrWyS_w2lFb5DGXq7X27dFIAWDZfd0H"
+        ],
+        desc: "Algodón 80%, Poliéster 20%"
+      },
+      {
+        id: "hoodie-gris-oscuro-essentials",
+        name: "Hoodie Gris Oscuro Essentials",
+        price: 1750,
+        sizes: ["S","M","L"],
+        stock: {S: 5, M: 5, L: 5},
+        thumbs: [
+          "https://drive.google.com/uc?export=view&id=1_XhgN44SxHPKwf1AESzTfxKka5PyCIf_",
+          "https://drive.google.com/uc?export=view&id=1jLFHyOmsVHWmI5zfxF_cKw6J-mOO6OJW"
+        ],
+        desc: "Algodón 80%, Poliéster 20%"
+      }
+    ];
+
+    function peso(n){return n.toLocaleString('es-MX',{style:'currency',currency:'MXN'});}
+
+    const grid=document.createElement('div');grid.className='grid';document.body.appendChild(grid);
+
+    PRODUCTS.forEach(p=>{
+      const card=document.createElement('article');card.className='card';
+      card.innerHTML=`<img class='thumb' src='${p.thumbs[0]}' alt='${p.name}'/><div class='card-body'><div class='title'><h3>${p.name}</h3><div class='price'>${peso(p.price)}</div></div><div class='muted'>${p.desc}</div></div>`;
+      grid.appendChild(card);
+    });
+  </script>
 </body>
 </html>
