@@ -6,40 +6,90 @@
   <title>2Wear Essentials — Born 2wear</title>
   <meta name="description" content="2Wear Essentials — Born 2wear. Sudaderas premium, streetwear y varsity. Pide por WhatsApp. Envíos en Puebla y a todo México." />
   <style>
-    :root{--bg:#0b0b0f;--card:#14141c;--text:#f5f7ff;--muted:#a7abbe;--brand:#5ee1a1;--border:#242436}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b0b0f, #111119 45%, #0b0b0f);color:var(--text)}
+    :root{
+      --bg:#0a0a0f;
+      --card:#131320;
+      --text:#f8f9ff;
+      --muted:#9aa0bd;
+      --brand:#5f8bff;
+      --border:#222236;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
+      background:linear-gradient(180deg,#0a0a0f 0%, #131320 100%);
+      color:var(--text);
+    }
     .container{max-width:1080px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
     .logo{display:flex;align-items:center;gap:12px}
-    .logo-badge{width:40px;height:40px;border-radius:10px;background:radial-gradient(70% 90% at 30% 20%,#78ffd6,transparent),radial-gradient(70% 70% at 70% 60%,#a8ff78,transparent),linear-gradient(135deg,#1b1b24,#0e0e14);border:1px solid var(--border);box-shadow:0 10px 25px rgba(94,225,161,.15), inset 0 0 0 1px rgba(255,255,255,.04)}
-    h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.2px}
-    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:14px}
-    nav a:hover{color:var(--text)}
+    .logo-badge{
+      width:40px;height:40px;border-radius:10px;
+      background:radial-gradient(70% 90% at 30% 20%,#7a5eff,transparent),
+                 radial-gradient(70% 70% at 70% 60%,#5f8bff,transparent),
+                 linear-gradient(135deg,#151522,#0a0a0f);
+      border:1px solid var(--border);
+      box-shadow:0 0 25px rgba(95,139,255,.3);
+    }
+    h1{font-size:18px;font-weight:700;letter-spacing:.3px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:14px;transition:.2s}
+    nav a:hover{color:var(--brand)}
     .tagline{color:var(--muted);font-size:12px;margin-left:8px}
     .hero{margin-top:12px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
-    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:0 8px 30px rgba(0,0,0,.35)}
-    .hero h2{font-size:28px;margin:4px 0 12px}
-    .hero p{color:var(--muted);margin:0 0 16px}
-    .cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,#b2ffea,#7affc7);color:#052b1f;border:none;border-radius:12px;padding:10px 16px;font-weight:700;cursor:pointer;text-decoration:none}
-    .cta:active{transform:translateY(1px)}
+    .hero-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:24px;
+      box-shadow:0 8px 30px rgba(0,0,0,.4);
+    }
+    .hero h2{font-size:28px;margin:4px 0 12px;color:var(--brand)}
+    .hero p{color:var(--muted);margin-bottom:16px}
+    .cta{
+      display:inline-flex;align-items:center;gap:10px;
+      background:linear-gradient(90deg,#7a5eff,#5f8bff);
+      color:#fff;border:none;border-radius:12px;
+      padding:10px 16px;font-weight:700;cursor:pointer;
+      text-decoration:none;transition:filter .2s;
+    }
+    .cta:hover{filter:brightness(1.15)}
     .grid{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
-    .thumb{aspect-ratio:1/1;background:#0f1117;display:block;object-fit:cover;width:100%}
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));
+      border:1px solid var(--border);
+      border-radius:16px;overflow:hidden;display:flex;flex-direction:column;
+      transition:transform .2s, box-shadow .2s;
+    }
+    .card:hover{transform:translateY(-3px);box-shadow:0 0 20px rgba(95,139,255,.2);}
+    .thumb{aspect-ratio:1/1;background:#0e0e14;object-fit:cover;width:100%}
     .card-body{padding:14px}
     .title{display:flex;align-items:center;justify-content:space-between}
-    .title h3{font-size:16px;margin:0}
+    .title h3{font-size:16px}
     .price{color:var(--brand);font-weight:800}
     .muted{color:var(--muted);font-size:12px;margin-top:4px}
     .row{display:flex;gap:8px;margin-top:10px}
-    select, input[type="number"]{flex:1;background:#0f1020;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:8px;font-size:14px}
-    .btn{width:100%;margin-top:10px;background:#1cf2a0;color:#052b1f;border:none;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer}
-    .btn:hover{filter:brightness(.95)}
+    select, input[type="number"]{
+      flex:1;background:#0e0f18;color:var(--text);
+      border:1px solid var(--border);border-radius:10px;
+      padding:8px;font-size:14px;
+    }
+    .btn{
+      width:100%;margin-top:10px;
+      background:linear-gradient(90deg,#7a5eff,#5f8bff);
+      color:#fff;border:none;border-radius:12px;
+      padding:10px 14px;font-weight:800;cursor:pointer;
+      transition:filter .2s;
+    }
+    .btn:hover{filter:brightness(1.15)}
     .section{margin-top:42px}
-    .pill{display:inline-block;border:1px solid var(--border);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px}
+    .pill{display:inline-block;border:1px solid var(--border);
+      padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px}
     .guide{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .guide .tip{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:14px;padding:14px}
-    footer{margin:48px 0 16px;color:var(--muted);font-size:12px}
+    .guide .tip{
+      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+      border:1px solid var(--border);border-radius:14px;padding:14px
+    }
+    footer{margin:48px 0 16px;color:var(--muted);font-size:12px;text-align:center}
   </style>
 </head>
 <body>
@@ -58,57 +108,5 @@
       </nav>
     </header>
   </div>
-  <script>
-    const WHATSAPP_NUMBER = '527713392257';
-    const PRODUCTS = [
-      {
-        id: "hoodie-negra-essentials",
-        name: "Hoodie Negra Essentials",
-        price: 1750,
-        sizes: ["S","M","L"],
-        stock: {S: 5, M: 5, L: 5},
-        thumbs: [
-          "https://drive.google.com/uc?export=view&id=1e6zXQwsRvVhoGNlyCYBjEbMYjxOyRWat",
-          "https://drive.google.com/uc?export=view&id=1lZS1Zw2kycp6IHflVDzxEz25GUOIQSFB",
-          "https://drive.google.com/uc?export=view&id=1OS2d5W3gxxR6t8nvtPBnCGxgnxNX3WEo"
-        ],
-        desc: "Algodón 80%, Poliéster 20%"
-      },
-      {
-        id: "hoodie-gris-claro-essentials",
-        name: "Hoodie Gris Claro Essentials",
-        price: 1750,
-        sizes: ["S","M","L"],
-        stock: {S: 5, M: 5, L: 5},
-        thumbs: [
-          "https://drive.google.com/uc?export=view&id=1_ABcnuhqzkHbL46BB3jfyyi8BYmg1MLC",
-          "https://drive.google.com/uc?export=view&id=1tYrWyS_w2lFb5DGXq7X27dFIAWDZfd0H"
-        ],
-        desc: "Algodón 80%, Poliéster 20%"
-      },
-      {
-        id: "hoodie-gris-oscuro-essentials",
-        name: "Hoodie Gris Oscuro Essentials",
-        price: 1750,
-        sizes: ["S","M","L"],
-        stock: {S: 5, M: 5, L: 5},
-        thumbs: [
-          "https://drive.google.com/uc?export=view&id=1_XhgN44SxHPKwf1AESzTfxKka5PyCIf_",
-          "https://drive.google.com/uc?export=view&id=1jLFHyOmsVHWmI5zfxF_cKw6J-mOO6OJW"
-        ],
-        desc: "Algodón 80%, Poliéster 20%"
-      }
-    ];
-
-    function peso(n){return n.toLocaleString('es-MX',{style:'currency',currency:'MXN'});}
-
-    const grid=document.createElement('div');grid.className='grid';document.body.appendChild(grid);
-
-    PRODUCTS.forEach(p=>{
-      const card=document.createElement('article');card.className='card';
-      card.innerHTML=`<img class='thumb' src='${p.thumbs[0]}' alt='${p.name}'/><div class='card-body'><div class='title'><h3>${p.name}</h3><div class='price'>${peso(p.price)}</div></div><div class='muted'>${p.desc}</div></div>`;
-      grid.appendChild(card);
-    });
-  </script>
 </body>
 </html>
